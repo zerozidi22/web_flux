@@ -2,7 +2,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/student?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/manage?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: root
   jpa:
@@ -11,3 +11,7 @@ spring:
         show_sql=true: true
         format_sql: true
         use_sql_comments: true
+        ddl-auto: none
+    database: mysql
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
