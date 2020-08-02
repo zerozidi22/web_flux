@@ -1,5 +1,6 @@
 package com.example.toy.controller;
 
+import com.example.toy.entity.student;
 import com.example.toy.service.studentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,9 @@ public class studentController {
 
     @RequestMapping(value = "/test")
     public Mono<String> getStudent(){
-        studentService.test();
-//        System.out.println("hi");
+        Mono<student> a = studentService.test();
+        a.
+        System.out.println("hi");
         return Mono.just("a");
     }
 }
